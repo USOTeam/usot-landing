@@ -1,97 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>USOT — United States Oil Token</title>
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: radial-gradient(circle at top, #111827, #020617);
-    color: #e5e7eb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-  }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USOT — United States Oil Token</title>
 
-  .container {
-    max-width: 720px;
-    padding: 30px;
-    text-align: center;
-    backdrop-filter: blur(12px);
-  }
+    <style>
+      body {
+        font-family: "Lucida Console", "Courier New", monospace;
+        background: radial-gradient(circle at top, #111827, #020617);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(12px);
+        -webkit-text-stroke: 1px gold;
+        user-select: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
 
-  .logo-wrap {
-    margin-bottom: 25px;
-  }
+      .no-gold {
+        -webkit-text-stroke: 0px !important; 
+      }
 
-  .logo-circle {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 10px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #facc15, #f97316);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 28px;
-    color: #000;
-    box-shadow: 0 0 30px rgba(250,204,21,0.4);
-  }
+      #background-layer {
+        background-image: url(https://picsum.photos/800/600/?blur&grayscale);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
-  .logo-text {
-    font-size: 42px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #facc15;
-  }
+      .container {
+        max-width: 720px;
+        text-align: center;
+      }
 
-  p {
-    line-height: 1.6;
-    opacity: 0.85;
-    margin-bottom: 18px;
-  }
+      #head-wrapper {
+        backdrop-filter: invert(100%);
+      }
 
-  .glow {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(250,204,21,0.15), transparent 70%);
-    top: -100px;
-    right: -100px;
-    filter: blur(60px);
-  }
+      #timer-container {
+        font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+      }
+    </style>
+  </head>
 
-  .grid {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    z-index: -1;
-  }
-</style>
-</head>
-<body>
+  <body class="text-black">
+    <div id="background-layer" class="absolute w-screen h-screen top-0 left-0"></div>
 
-<div class="grid"></div>
-<div class="glow"></div>
+    <div class="overflow-auto absolute w-screen h-screen top-0 left-0">
+      <p class="font-extrabold text-6xl text-center font-sans pt-3 px-3 mb-2">Ensuring The Future</p>
+      <p class="text-center pb-3">with the <span class="font-bold font-mono text-green-600 no-gold">USDT</span> of the next generation</p>
 
-<div class="container">
-  <div class="logo-wrap">
-    <div class="logo-circle">US</div>
-    <div class="logo-text">USOT</div>
-  </div>
+      <div id="head-wrapper" class="my-5">
+        <div class="container m-auto py-5 items-center">
+          <img id="logo-img" class="m-auto px-5 py-0" src="./assets/USOT256.png" />
 
-  <img src="./assets/USOT.png" />
+          <div id="timer-container" class="text-3xl px-3">
+            <b>Almost There! Official release in:</b>
+            <div>
+              <b id="timer"></b>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <b>Almost There</b>
-</div>
+      <div class="container m-auto py-5 items-center">
+        <div class="mx-2 py-5 px-2 rounded-md bg-yellow-50/50">
+          <p class="mb-5">United States Oil Token <span class="font-extrabold font-mono">(USOT)</span> is a next-generation digital asset engineered to bridge the gap between traditional energy markets and the evolving world of decentralized finance. Backed conceptually by the global value of oil, USOT is designed to introduce stability, resilience, and real-world relevance into the cryptocurrency ecosystem.</p>
 
-</body>
+          <p class="mb-5">Built with a focus on the strategic importance of oil in the global economy, USOT aims to act as a stabilizing force during periods of market volatility and energy uncertainty. By aligning its value narrative with one of the world’s most critical resources, the token offers a hedge-like digital instrument for investors seeking exposure to energy-driven wealth.</p>
+
+          <p class="mb-5">USOT’s mission is to support global economic balance by providing a reliable, oil-inspired digital asset that reflects the foundational role of energy in modern civilization. In times of disruption across oil supply chains or geopolitical instability, USOT aspires to serve as a financial anchor within the crypto space.</p>
+
+          <p>With a vision rooted in strength, resource-backed value, and long-term sustainability, USOT represents the fusion of energy dominance and digital innovation—positioning itself as a symbol of wealth, power, and economic stability in a rapidly changing world.</p>
+        </div>
+      </div>
+
+      <hr class="mx-5" />
+    
+      <div class="text-xs mx-5 px-3 my-2 text-right no-gold text-gray-100 font-mono flex justify-between">
+        <span>USO Team</span>
+        <span>© All Rights Reserved</span>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <script>
+    function setTimer() {
+      var futureMoment = moment('2026-04-01 10:00:00');
+      // var diff = moment.utc( futureMoment.diff(moment()) );
+      // document.getElementById("timer").innerText = diff.format("HH:mm:ss");
+      let duration = moment.duration(futureMoment.diff(moment()));
+
+      let days = duration.days();
+      let hours = duration.hours();
+      let minutes = duration.minutes();
+      let seconds = duration.seconds();
+
+      document.getElementById("timer").innerText = `Days: ${days}, Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`;
+    }
+    setTimer();
+    setInterval(() => setTimer(), 1000);
+  </script>
 </html>
